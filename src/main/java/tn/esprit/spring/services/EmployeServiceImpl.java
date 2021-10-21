@@ -2,7 +2,6 @@ package tn.esprit.spring.services;
 
 import java.util.List;
 
-import javax.transaction.Transactional;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -10,9 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import tn.esprit.spring.entities.Employe;
-import tn.esprit.spring.entities.User;
 import tn.esprit.spring.repository.EmployeRepository;
-import tn.esprit.spring.repository.UserRepository;
 
 @Service
 public class EmployeServiceImpl implements IEmployeService {
@@ -60,9 +57,7 @@ public class EmployeServiceImpl implements IEmployeService {
 	@Override
 	public Employe retrieveEmploye(String id) {
 		l.info("in  retrieveUser id = " + id);
-		//User u =  userRepository.findById(Long.parseLong(id)).orElse(null);
-		//int i = 1/0; 
-		//Employe e =  employeRepository.findById(Integer.parseInt(id)).get(); 
+
 		Employe e =  employeRepository.findById(Integer.parseInt(id)).orElse(null); 
 
 		l.info("employe returned : " + e);
