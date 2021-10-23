@@ -1,12 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: tn.esprit.spring.service.EmployeServiceImplTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 31.28 s <<< FAILURE! - in tn.esprit.spring.service.EmployeServiceImplTest
-testRetrieveAllEmploye  Time elapsed: 5.54 s  <<< FAILURE!
-java.lang.AssertionError: expected:<9> but was:<10>
-	at tn.esprit.spring.service.EmployeServiceImplTest.testRetrieveAllEmploye(EmployeServiceImplTest.java:34)
-
-testDeleteUser  Time elapsed: 0.113 s  <<< ERROR!
-org.springframework.dao.EmptyResultDataAccessException: No class tn.esprit.spring.entities.Employe entity with id 2 exists!
-	at tn.esprit.spring.service.EmployeServiceImplTest.testDeleteUser(EmployeServiceImplTest.java:60)
-
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.629 s - in tn.esprit.spring.service.EmployeServiceImplTest
