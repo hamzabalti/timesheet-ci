@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: tn.esprit.spring.service.DeprtmentServiceImplTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 5.231 s <<< FAILURE! - in tn.esprit.spring.service.DeprtmentServiceImplTest
+testDeleteDepartment  Time elapsed: 0.149 s  <<< ERROR!
+org.springframework.dao.EmptyResultDataAccessException: No class tn.esprit.spring.entities.Departement entity with id 2 exists!
+	at tn.esprit.spring.service.DeprtmentServiceImplTest.testDeleteDepartment(DeprtmentServiceImplTest.java:56)
+
+testRetrieveAlldepartments  Time elapsed: 0.197 s  <<< FAILURE!
+java.lang.AssertionError: expected:<11> but was:<0>
+	at tn.esprit.spring.service.DeprtmentServiceImplTest.testRetrieveAlldepartments(DeprtmentServiceImplTest.java:30)
+
+testRetrieveDepartment  Time elapsed: 0.006 s  <<< ERROR!
+java.lang.NullPointerException
+	at tn.esprit.spring.service.DeprtmentServiceImplTest.testRetrieveDepartment(DeprtmentServiceImplTest.java:51)
+
