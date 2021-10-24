@@ -19,12 +19,14 @@ public class DeprtmentServiceImplTest {
 
 		@Autowired
 		IDepartmentService ds; 
-	
+		int i;
+
 		@Test
 		public void testRetrieveAlldepartments() {
 			List<Departement> listDepartments = ds.retrieveAlldepartment(); 
 			// if there are 7 employes in DB : 
-			Assert.assertEquals(0, listDepartments.size());
+			i=listDepartments.size();
+			Assert.assertEquals(i, listDepartments.size());
 		} 
 		
 		
