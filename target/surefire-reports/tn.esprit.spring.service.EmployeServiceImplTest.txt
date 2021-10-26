@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: tn.esprit.spring.service.EmployeServiceImplTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.629 s - in tn.esprit.spring.service.EmployeServiceImplTest
+Tests run: 5, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 7.978 s <<< FAILURE! - in tn.esprit.spring.service.EmployeServiceImplTest
+testDeleteUser  Time elapsed: 0.048 s  <<< ERROR!
+org.springframework.dao.EmptyResultDataAccessException: No class tn.esprit.spring.entities.Employe entity with id 26 exists!
+	at tn.esprit.spring.service.EmployeServiceImplTest.testDeleteUser(EmployeServiceImplTest.java:57)
+
