@@ -1,11 +1,7 @@
 
 package tn.esprit.spring.service;
-
- 
 import java.text.ParseException;
-
 import java.util.List;
-
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -24,24 +20,24 @@ public class EmployeServiceImplTest {
 		@Autowired
 		IEmployeService es; 
 	
-		/*@Test
+		@Test
 		public void testRetrieveAllEmploye() {
 			List<Employe> listEmployes = es.retrieveAllEmploye(); 
 			// if there are 7 employes in DB : 
-			Assert.assertEquals(8, listEmployes.size());
-		}*/
+			Assert.assertEquals(7, listEmployes.size());
+		}
 		
 		
 		@Test
 		public void testAddEmploye() throws ParseException {
-			Employe e = new Employe("ut", "balti", "baltihamza6@gmail.com", "12345", true, Role.ADMINISTRATEUR); 
+			Employe e = new Employe("ut", "you", "baltihamza6@gmail.com", "12345", true, Role.ADMINISTRATEUR); 
 			Employe employeAdded = es.addEmploye(e); 
 			Assert.assertEquals(e.getNom(), employeAdded.getNom());
 		}
 	 
-		/*@Test
+		@Test
 		public void testModifyEmploye() throws ParseException   {
-			Employe e = new Employe(19,"vvn", "ppppp", "baltihamza6@gmail.com", "12345", true, Role.ADMINISTRATEUR); 
+			Employe e = new Employe(19,"vvn", "zaaaaaaaaaa", "baltihamza6@gmail.com", "12345", true, Role.ADMINISTRATEUR); 
 			Employe employeUpdated  = es.updateEmploye(e);
 			Assert.assertEquals(e.getNom(), employeUpdated.getNom());
 		}
@@ -54,10 +50,10 @@ public class EmployeServiceImplTest {
 		
 		@Test
 		public void testDeleteUser() {
-			es.deleteEmploye("26");
-			Assert.assertNull(es.retrieveEmploye("26"));
+			es.deleteEmploye("25");
+			Assert.assertNull(es.retrieveEmploye("25"));
 		
-		}*/
+		}
 		// 5 tests unitaires  
  
 }
