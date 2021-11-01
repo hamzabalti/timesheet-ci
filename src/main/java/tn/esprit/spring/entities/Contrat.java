@@ -2,12 +2,14 @@ package tn.esprit.spring.entities;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Temporal;
@@ -24,10 +26,9 @@ public class Contrat implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	//@SequenceGenerator(name="seq")
-	private int reference;
+	private int id;
 	
-	@Temporal(TemporalType.DATE)
-	private Date dateDebut;
+	private String datex;
 	
 	//@Column(name="TYPE_CTR", nullable=true )
 	private String typeContrat;
@@ -39,6 +40,9 @@ public class Contrat implements Serializable {
 	//@JsonBackReference
 	@OneToOne(mappedBy="contrat")
 	private Employe employe;
+	
+	@OneToMany(mappedBy="contrat")
+	private List<Mission> missions;
 
 	private float salaire;
 
@@ -46,27 +50,35 @@ public class Contrat implements Serializable {
 		super();
 	}
 	
-	public Contrat(Date dateDebut, String typeContrat, float salaire) {
-		this.dateDebut = dateDebut;
+	public Contrat(String datex, String typeContrat, float salaire) {
+		this.datex = datex;
+		this.typeContrat = typeContrat;
+		this.salaire = salaire;
+	}
+	
+	public Contrat(int id,String datex, String typeContrat, float salaire) {
+		super();
+		this.id=id;
+		this.datex = datex;
 		this.typeContrat = typeContrat;
 		this.salaire = salaire;
 	}
 
 
-	public Date getDateDebut() {
-		return dateDebut;
+	public String getDatex() {
+		return datex;
 	}
 
-	public void setDateDebut(Date dateDebut) {
-		this.dateDebut = dateDebut;
+	public void setDatex(String datex) {
+		this.datex = datex;
 	}
 
-	public int getReference() {
-		return reference;
+	public int getId() {
+		return id;
 	}
 
-	public void setReference(int reference) {
-		this.reference = reference;
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getTypeContrat() {
