@@ -36,7 +36,7 @@ public class DeprtmentServiceImplTest {
 			Assert.assertEquals(d.getName(), departmentAdded.getName());
 		}
 	 
-		/*@Test
+		@Test
 		public void testModifyDepartment() throws ParseException   {
 			Departement d = new Departement(8,"SIM"); 
 			Departement DepartmentUpdated  = ds.updateDepartement(d);
@@ -56,7 +56,7 @@ public class DeprtmentServiceImplTest {
 		
 		}
 		// 5 tests unitaires  
- */
+ 
 }
 
 
