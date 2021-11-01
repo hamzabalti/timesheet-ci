@@ -122,11 +122,35 @@
 			</plugin>
 		</plugins>
 	</build>
+<<<<<<< HEAD
 	<repositories>
+=======
+	
+	
+	
+	
+<repositories>
+>>>>>>> af29a56b8f078a2fc39960dfad0c8cb0f34b4061
 <repository>
 <id>maven-group</id>
 <url>http://localhost:8081/repository/maven-group/</url>
 </repository>
 </repositories>
 
+<<<<<<< HEAD
+=======
+  <distributionManagement>
+    <repository>
+      <id>deploymentRepo</id>
+      <name>Releases</name>
+      <url>http://localhost:8081/repository/maven-releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>deploymentRepo</id>
+      <name>Snapshot</name>
+      <url>http://localhost:8081/repository/maven-snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+
+>>>>>>> af29a56b8f078a2fc39960dfad0c8cb0f34b4061
 </project>

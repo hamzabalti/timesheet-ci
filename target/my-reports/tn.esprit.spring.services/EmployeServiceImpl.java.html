@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>EmployeServiceImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">timesheet-ci</a> &gt; <a href="index.source.html" class="el_package">tn.esprit.spring.services</a> &gt; <span class="el_source">EmployeServiceImpl.java</span></div><h1>EmployeServiceImpl.java</h1><pre class="source lang-java linenums">package tn.esprit.spring.services;
+=======
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>EmployeServiceImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">timesheet-ci</a> &gt; <a href="index.source.html" class="el_package">tn.esprit.spring.services</a> &gt; <span class="el_source">EmployeServiceImpl.java</span></div><h1>EmployeServiceImpl.java</h1><pre class="source lang-java linenums">package tn.esprit.spring.services;
+>>>>>>> af29a56b8f078a2fc39960dfad0c8cb0f34b4061
 
 import java.util.List;
 
@@ -22,6 +26,7 @@ import tn.esprit.spring.repository.EmployeRepository;
 	
 	@Override
 	public List&lt;Employe&gt; retrieveAllEmploye() { 
+<<<<<<< HEAD
 <span class="nc" id="L25">		List&lt;Employe&gt; employes = null; </span>
 		try {
 	
@@ -36,21 +41,46 @@ import tn.esprit.spring.repository.EmployeRepository;
 <span class="nc" id="L36">		}</span>
 
 <span class="nc" id="L38">		return employes;</span>
+=======
+<span class="fc" id="L25">		List&lt;Employe&gt; employes = null; </span>
+		try {
+	
+<span class="fc" id="L28">			l.info(&quot;In retrieveAllUsers() : &quot;);</span>
+<span class="fc" id="L29">			employes = (List&lt;Employe&gt;) employeRepository.findAll();  </span>
+<span class="fc bfc" id="L30" title="All 2 branches covered.">			for (Employe e : employes) {</span>
+<span class="fc" id="L31">				l.debug(&quot;employe +++ : &quot; + e);</span>
+<span class="fc" id="L32">			} </span>
+<span class="fc" id="L33">			l.info(&quot;Out of retrieveAllEmploye() : &quot;);</span>
+<span class="nc" id="L34">		}catch (Exception e) {</span>
+<span class="nc" id="L35">			l.error(&quot;Error in retrieveAllEmploye() : &quot; + e);</span>
+<span class="fc" id="L36">		}</span>
+
+<span class="fc" id="L38">		return employes;</span>
+>>>>>>> af29a56b8f078a2fc39960dfad0c8cb0f34b4061
 	}
 
 
 	@Override
 	public Employe addEmploye(Employe e) {
+<<<<<<< HEAD
 <span class="nc" id="L44">		return employeRepository.save(e); </span>
+=======
+<span class="fc" id="L44">		return employeRepository.save(e); </span>
+>>>>>>> af29a56b8f078a2fc39960dfad0c8cb0f34b4061
 	}
 
 	@Override 
 	public Employe updateEmploye(Employe e) { 
+<<<<<<< HEAD
 <span class="nc" id="L49">		return employeRepository.save(e);</span>
+=======
+<span class="fc" id="L49">		return employeRepository.save(e);</span>
+>>>>>>> af29a56b8f078a2fc39960dfad0c8cb0f34b4061
 	}
 
 	@Override
 	public void deleteEmploye(String id) {
+<<<<<<< HEAD
 <span class="nc" id="L54">		employeRepository.deleteById(Integer.parseInt(id));</span>
 <span class="nc" id="L55">	}</span>
 
@@ -62,6 +92,19 @@ import tn.esprit.spring.repository.EmployeRepository;
 
 <span class="nc" id="L63">		l.info(&quot;employe returned : &quot; + e);</span>
 <span class="nc" id="L64">		return e; </span>
+=======
+<span class="fc" id="L54">		employeRepository.deleteById(Integer.parseInt(id));</span>
+<span class="fc" id="L55">	}</span>
+
+	@Override
+	public Employe retrieveEmploye(String id) {
+<span class="fc" id="L59">		l.info(&quot;in  retrieveUser id = &quot; + id);</span>
+
+<span class="fc" id="L61">		Employe e =  employeRepository.findById(Integer.parseInt(id)).orElse(null); </span>
+
+<span class="fc" id="L63">		l.info(&quot;employe returned : &quot; + e);</span>
+<span class="fc" id="L64">		return e; </span>
+>>>>>>> af29a56b8f078a2fc39960dfad0c8cb0f34b4061
 	}
 
 
