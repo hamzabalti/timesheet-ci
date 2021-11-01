@@ -39,7 +39,7 @@ public class ContratServiceImplTest {
 			Assert.assertEquals(c.getDatex(), contratAdded.getDatex());
 		}
 	 
-		@Test
+		/*@Test
 		public void testModifyContrat() throws ParseException   {
 			Contrat c = new Contrat(1,"31/10/2021","CDI", 6300); 
 			Contrat contratUpdated  = cs.updatecontrat(c);
@@ -58,7 +58,7 @@ public class ContratServiceImplTest {
 			Assert.assertNull(cs.retreivecontrat("1"));
 		
 		}
- 
+ */
 }
 
 
