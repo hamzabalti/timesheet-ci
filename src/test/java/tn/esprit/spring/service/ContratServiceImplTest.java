@@ -34,7 +34,7 @@ public class ContratServiceImplTest {
 		
 		@Test
 		public void testAddcontrat() throws ParseException {
-			Contrat c = new Contrat("31/10/2021","CDI", 6300); 
+			Contrat c = new Contrat("01/11/2021","CDI", 6900); 
 			Contrat contratAdded = cs.addcontrat(c); 
 			Assert.assertEquals(c.getDatex(), contratAdded.getDatex());
 		}
