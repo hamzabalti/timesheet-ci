@@ -29,7 +29,6 @@ public class DeprtmentServiceImplTest {
 			Assert.assertEquals(i, listDepartments.size());
 		} 
 		
-		
 		@Test
 		public void testAddDepartment() throws ParseException {
 			Departement d = new Departement("GL"); 

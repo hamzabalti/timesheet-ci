@@ -1,7 +1,11 @@
 
 package tn.esprit.spring.service;
+
+ 
 import java.text.ParseException;
+
 import java.util.List;
+
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -24,34 +28,21 @@ public class EmployeServiceImplTest {
 		public void testRetrieveAllEmploye() {
 			List<Employe> listEmployes = es.retrieveAllEmploye(); 
 			// if there are 7 employes in DB : 
-<<<<<<< HEAD
 			i=listEmployes.size();
 			Assert.assertEquals(i, listEmployes.size());
 		}
-=======
-			Assert.assertEquals(6, listEmployes.size());
-		}*/
->>>>>>> af29a56b8f078a2fc39960dfad0c8cb0f34b4061
 		
 		
 		@Test
 		public void testAddEmploye() throws ParseException {
-<<<<<<< HEAD
 			Employe e = new Employe("tt", "balti", "baltihamza6@gmail.com", "12345", true, Role.ADMINISTRATEUR); 
-=======
-			Employe e = new Employe("ut", "you", "baltihamza6@gmail.com", "12345", true, Role.ADMINISTRATEUR); 
->>>>>>> af29a56b8f078a2fc39960dfad0c8cb0f34b4061
 			Employe employeAdded = es.addEmploye(e); 
 			Assert.assertEquals(e.getNom(), employeAdded.getNom());
 		}
 	 
 		/*@Test
 		public void testModifyEmploye() throws ParseException   {
-<<<<<<< HEAD
 			Employe e = new Employe(18,"uu", "jamil", "baltihamza6@gmail.com", "12345", true, Role.ADMINISTRATEUR); 
-=======
-			Employe e = new Employe(19,"vvn", "zaaaaaaaaaa", "baltihamza6@gmail.com", "12345", true, Role.ADMINISTRATEUR); 
->>>>>>> af29a56b8f078a2fc39960dfad0c8cb0f34b4061
 			Employe employeUpdated  = es.updateEmploye(e);
 			Assert.assertEquals(e.getNom(), employeUpdated.getNom());
 		}
@@ -64,13 +55,8 @@ public class EmployeServiceImplTest {
 		
 		@Test
 		public void testDeleteUser() {
-<<<<<<< HEAD
 			es.deleteEmploye("17");
 			Assert.assertNull(es.retrieveEmploye("17"));
-=======
-			es.deleteEmploye("77");
-			Assert.assertNull(es.retrieveEmploye("77"));
->>>>>>> af29a56b8f078a2fc39960dfad0c8cb0f34b4061
 		
 		}
 		// 5 tests unitaires  
